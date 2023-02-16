@@ -1,6 +1,6 @@
-class PackagingTesterKt : TesterKt() {
-    override fun validate(productKt: ProductKt): Boolean =
-        with(productKt) {
+class PackagingTester : Tester() {
+    override fun test(product: Product): Boolean =
+        with(product) {
             packaging.isValid()
         }
 
