@@ -1,16 +1,16 @@
 package org.example;
 
-public abstract class QA {
+public abstract class Tester {
 
-    private QA nextTester;
+    private Tester nextTester;
 
     protected abstract boolean validate( Product product );
 
-    public QA getNextTester() {
+    public Tester getNextTester() {
         return nextTester;
     }
 
-    public void setNextTester( QA nextTester ) {
+    public void setNextTester( Tester nextTester ) {
         this.nextTester = nextTester;
     }
 }
