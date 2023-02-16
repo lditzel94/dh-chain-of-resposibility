@@ -11,13 +11,9 @@ public abstract class Tester {
     protected abstract boolean validate( Product product );
 
     protected boolean nextValidationFor( Product product ) {
-        return Optional.ofNullable( getNextTester() )
+        return Optional.ofNullable( nextTester )
                        .map( validateFor( product ) )
                        .orElse( true );
-    }
-
-    private Tester getNextTester() {
-        return nextTester;
     }
 
     public void setNextTester( Tester nextTester ) {
