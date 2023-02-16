@@ -3,8 +3,8 @@ abstract class Tester {
         get() {
             return nextTester
         }
-        set(KTester: Tester) {
-            nextTester = KTester
+        set(tester: Tester) {
+            nextTester = tester
         }
 
     abstract fun test(KProduct: Product): Boolean
